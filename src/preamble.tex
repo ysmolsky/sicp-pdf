@@ -65,10 +65,13 @@
 \usepackage[final]{pdfpages} % inserts pages from a pdf file
 
 % Page geometry for 10-inch tablets:
-\usepackage[papersize={148mm,197mm},
-            top=21mm,
-            textwidth=111mm,  % increase one or both of these by 1mm or so to
-            textheight=148mm, % make the source compile with TeX Live 2013
+\usepackage[papersize={120mm,170mm},
+            top=1mm,
+            bottom=6mm,
+            left=1mm,
+            right=1mm,
+            % textwidth=111mm,  % increase one or both of these by 1mm or so to
+            % textheight=148mm, % make the source compile with TeX Live 2013
             hcentering,       % if you get "Too many unprocessed floats" error
 ]{geometry}
 
@@ -77,7 +80,7 @@
 \usepackage{verbatim}  % for simple verbatim and comment environments
 \usepackage{enumerate} % allows customized labels in enumerations
 \usepackage{hyperref}  % makes cross references and URLs clickable
-\definecolor{LinkRed}{HTML}{80171F}
+\definecolor{LinkRed}{HTML}{4d0d12}
 \hypersetup{
   pdfauthor={Harold Abelson, Gerald Jay Sussman, Julie Sussman},
   pdftitle={Structure and Interpretation of Computer Programs, 2nd ed.},
@@ -90,7 +93,8 @@
 % Document colors
 \definecolor{SchemeLight}   {HTML} {686868}
 \definecolor{SchemeSteel}   {HTML} {888888}
-\definecolor{SchemeDark}    {HTML} {262626}
+% \definecolor{SchemeDark}    {HTML} {262626}
+\definecolor{SchemeDark}    {HTML} {000000}
 \definecolor{SchemeBlue}    {HTML} {4172A3}
 \definecolor{SchemeGreen}   {HTML} {487818}
 \definecolor{SchemeBrown}   {HTML} {A07040}
@@ -102,7 +106,7 @@
 \definecolor{DropCapViolet} {HTML} {9090C0}
 
 \usepackage{lettrine}  % adds commands that make drop capitals
-\renewcommand{\LettrineFontHook}{\rmfamily\mdseries\color{DropCapViolet}}
+\renewcommand{\LettrineFontHook}{\rmfamily\mdseries\color{SchemeDark}}
 \renewcommand{\DefaultLraise}{0.00}
 \renewcommand{\DefaultLoversize}{0.02}
 \renewcommand{\DefaultLhang}{0.12}
@@ -134,7 +138,7 @@
       'letrec-syntax, 'syntax-rules},
     emphstyle=\color{SchemeDark},
     % Paint error red:
-    emph={[2]error},emphstyle=[2]\color{SchemeRed},%
+    emph={[2]error},emphstyle=[2]\color{SchemeDark},%
     % Builtins taken from functional.py:
     emph={[3]*, +, -, /, <, <=, =, >, >=, abs, acos, angle,
         append, apply, asin, assoc, assq, assv, atan,
@@ -174,13 +178,13 @@
         vector, vector->list, vector-fill!, vector-length,
         vector-ref, vector-set!, vector?, with-input-from-file,
         with-output-to-file, write, write-char, zero?},
-    emphstyle=[3]\color{SchemeViolet},%
+    emphstyle=[3]\color{SchemeDark},%
     %
-    basicstyle=\color{SchemeLight}\ttfamily,
-    keywordstyle=\color{SchemeBlue}\bfseries,
+    basicstyle=\color{SchemeDark}\ttfamily,
+    keywordstyle=\color{SchemeDark}\bfseries,
     identifierstyle=\color{SchemeDark},
-    stringstyle=\color{SchemeGreen},
-    commentstyle=\color{SchemeLight}\itshape,
+    stringstyle=\color{SchemeDark},
+    commentstyle=\color{SchemeDark}\itshape,
 }
 
 \newcommand{\acronym}[1]{\textsc{\fontspec[Numbers={OldStyle}]{Linux Libertine O}\MakeLowercase{#1}}}
@@ -203,16 +207,16 @@
   {\endverbatim}
 
 \lstnewenvironment{scheme}[1][]
-{\lstset{basicstyle=\ttfamily\small\color{SchemeLight},#1}}
+{\lstset{basicstyle=\ttfamily\small\color{SchemeDark},#1}}
 {}
 
 \lstnewenvironment{smallscheme}[1][]
-{\lstset{basicstyle=\ttfamily\footnotesize\color{SchemeLight},#1}}
+{\lstset{basicstyle=\ttfamily\footnotesize\color{SchemeDark},#1}}
 {}
 
 \titleformat{\chapter}[display]
   {\color{SchemeDark}\normalfont\sffamily\bfseries\LARGE}
-  {\filright \color{ChapterViolet}\sffamily\mdseries
+  {\filright \color{SchemeDark}\sffamily\mdseries
     \fontsize{6em}{0em}\selectfont
     \oldstylenums{\thechapter}}
   {1em}
@@ -220,15 +224,15 @@
 
 \titleformat{\section}
 {\color{SchemeDark}\normalfont\Large\sffamily\bfseries}
-{\color{DropCapViolet}\thesection}{0.8em}{}
+{\color{SchemeDark}\thesection}{0.8em}{}
 
 \titleformat{\subsection}
 {\color{SchemeDark}\normalfont\large\sffamily\bfseries}
-{\color{DropCapViolet}\thesubsection}{0.8em}{}
+{\color{SchemeDark}\thesubsection}{0.8em}{}
 
 \titleformat{\subsubsection}
 {\color{black}\normalfont\normalsize\sffamily\bfseries}
-{\color{DropCapViolet}\thesubsubsection}{0.8em}{}
+{\color{SchemeDark}\thesubsubsection}{0.8em}{}
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
